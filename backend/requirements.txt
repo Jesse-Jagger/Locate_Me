@@ -1,0 +1,7 @@
+Flask
+Flask-MySQLdb
+Flask-SQLAlchemy
+Flask-CORS
+flask-bcrypt
+Flask-JWT-Extended
+Flask-Migrate
