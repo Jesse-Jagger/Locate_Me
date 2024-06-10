@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
-from models import db, Marker
+from flask_jwt_extended import get_jwt_identity
+from models import User, db, Marker
 
 map_bp = Blueprint('map', __name__)
 
@@ -38,7 +39,7 @@ def handle_marker(id):
         db.session.commit()
         return jsonify({'message': 'Marker deleted successfully'})
     
-@auth_bp.route('/api/auth/profile', methods=['GET', 'PUT'])
+@auth_bp.route('/api/auth/profile', methods=['GET', 'PUT']) # type: ignore
 def profile():
     if request.method == 'GET':
         # Fetch profile details

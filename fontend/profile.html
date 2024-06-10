@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/profile.css">
+    <script src="js/profile.js"></script>
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <nav class="d-flex justify-content-between">
+            <a class="text-white" href="index.html">Home</a>
+            <a class="text-white" href="logout.html">Back</a>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">User Profile</h1>
+        <div class="row">
+            <!-- Profile Picture Section -->
+            <div class="col-md-4 text-center">
+                <img src="images/default-profile.png" alt="Profile Picture" class="img-fluid rounded-circle mb-3" id="profilePicture">
+                <input type="file" class="form-control-file" id="uploadProfilePicture">
+            </div>
+            <!-- User Information Section -->
+            <div class="col-md-8">
+                <form id="profileForm" class="mb-4">
+                    <div class="form-group">
+                        <label for="First_Name">First Name:</label>
+                        <input type="text" class="form-control" id="First_Name" name="First_Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other_Name">Other Names:</label>
+                        <input type="Other_Name" class="form-control" id="Other_Name" name="Other_Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Last_Name">Last Name:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address:</label>
+                        <input type="Address" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone_Number">Phone Number:</label>
+                        <input type="Phone_Number" class="form-control" id="Phone_Number" name="Phone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                </form>
+                <!-- Change Password Section -->
+                <form id="changePasswordForm">
+                    <h3>Change Password</h3>
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password:</label>
+                        <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm New Password:</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
