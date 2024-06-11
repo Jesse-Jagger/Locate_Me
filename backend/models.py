@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
-from datetime import datetime
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -11,17 +10,14 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(128), nullable=False)
-
-    def __repr__(self):
-        return f'<User {self.username}>'
+    password = db.Column(db.String(120), nullable=False)
 
 class Marker(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     lat = db.Column(db.Float, nullable=False)
     lng = db.Column(db.Float, nullable=False)
-    title = db.Column(db.String(80), nullable=False)
-    description = db.Column(db.String(200))
+    title = db.Column(db.String(120), nullable=False)
+    description = db.Column(db.String(200), nullable=True)
 
-    def __repr__(self):
-        return f'<Marker {self.title}>'
+    def as_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
