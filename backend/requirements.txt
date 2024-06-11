@@ -1,7 +1,10 @@
 Flask
-Flask-MySQLdb
 Flask-SQLAlchemy
-Flask-CORS
-flask-bcrypt
-Flask-JWT-Extended
 Flask-Migrate
+Flask-JWT-Extended
+Flask-Bcrypt
+Flask-Cors
+PyMySQL
+python-dotenv
+Werkzeug
+Flask-MySQLdb
